@@ -87,8 +87,17 @@ function shake8Ball() {
         default:
             answer = "Something went wrong, please try again.";
             break;
+    }
+    const responseText = document.getElementById('response-text');
+    responseText.innerText = answer;
+    responseText.classList = `display-4 ${color}`;
+    document.getElementById('response-image').src = image;
+    document.getElementById('response-image').alt = alt;
+    let respQuest = document.getElementById('resp-ques');
+    respQuest.innerText = question;
 }
-const responseText = document.getElementById('response-text');
+
+/*const responseText = document.getElementById('response-text');
 responseText.innerText = answer;
 responseText.classList = `display-4 ${color}`;
 
@@ -111,4 +120,4 @@ newImage.onload = function() {
 // Set the source of the new image
 newImage.src = image;
 newImage.alt = alt;
-}
+}*/
